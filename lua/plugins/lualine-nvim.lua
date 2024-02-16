@@ -3,15 +3,17 @@ local config = function()
 		options = {
 			theme = "auto",
 			globalstatus = true,
+			component_separators = { left = "|", right = "|" },
+			section_separators = { left = "", right = "" },
 		},
-		tabline = {
-			lualine_a = { "branch" },
+		sections = {
+			lualine_a = { "mode" },
 			lualine_b = { "buffers" },
-			lualine_c = { "diff" },
 			lualine_x = { "encoding", "fileformat", "filetype" },
 			lualine_y = { "progress" },
+			lualine_z = { "location" },
 		},
-		sections = {},
+		tabline = {},
 	})
 end
 

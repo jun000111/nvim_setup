@@ -53,12 +53,12 @@ api.nvim_set_keymap("n", "<leader>zm", ":TZMinimalist<CR>", {})
 api.nvim_set_keymap("n", "<leader>za", ":TZAtaraxis<CR>", {})
 
 -- Comments
-api.nvim_set_keymap("n", "<a-q>", "gtc", { noremap = true,silent=true })
-api.nvim_set_keymap("v", "<a-q>", "goc", { noremap = true,silent=true })
+api.nvim_set_keymap("n", "<A-q>", "gtc", {})
+api.nvim_set_keymap("v", "<A-q>", "goc", {})
 
 --Move lines
-api.nvim_set_keymap("v", "<a-j>", ":m '>+1<cr>gv=gv", {noremap=true,silent=true})
-api.nvim_set_keymap("v", "<a-k>", ":m '<-2<cr>gv=gv", {noremap=true,silent=true})
-api.nvim_set_keymap('n', '<A-j>', ':m .+1<CR>==', { noremap = true, silent = true })
-api.nvim_set_keymap('n', '<A-k>', ':m .-2<CR>==', { noremap = true, silent = true })
+api.nvim_set_keymap("v", "<a-j>", ":m '>+1<cr>gv=gv", { noremap = true, silent = true })
+api.nvim_set_keymap("v", "<a-k>", ":m '<-2<cr>gv=gv", { noremap = true, silent = true })
+api.nvim_set_keymap("n", "<A-j>", ":m .+1<CR>==", { noremap = true, silent = true })
+api.nvim_set_keymap("n", "<A-k>", ":m .-2<CR>==", { noremap = true, silent = true })
 
