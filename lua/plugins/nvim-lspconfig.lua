@@ -26,8 +26,8 @@ local config = function()
 				workspace = {
 					-- make language server aware of runtime files
 					library = {
-						[vim.fn.expand("$VIMRUNTIME/lua")] = true,
-						[vim.fn.stdpath("config") .. "/lua"] = true,
+            vim.fn.expand("$VIMRUNTIME/lua"),
+            vim.fn.expand("$XDG_CONFIG_HOME") .. "/nvim/lua",
 					},
 				},
 			},
@@ -58,29 +58,6 @@ local config = function()
 		},
 	})
 
-	-- typescript
-	lspconfig.tsserver.setup({
-		on_attach = on_attach,
-		capabilities = capabilities,
-		filetypes = {
-			"typescript",
-			"javascript",
-			"typescriptreact",
-			"javascriptreact",
-		},
-		commands = {
-			TypeScriptOrganizeImports = typescript_organise_imports,
-		},
-		settings = {
-			typescript = {
-				indentStyle = "space",
-				indentSize = 2,
-			},
-		},
-		root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json", ".git"),
-	})
-
-	-- bash
 	lspconfig.bashls.setup({
 		capabilities = capabilities,
 		on_attach = on_attach,

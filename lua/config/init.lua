@@ -1,3 +1,4 @@
+--check , load and add lazynvim to path
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -11,11 +12,13 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+--load configs
 require("config.globals")
 require("config.options")
 require("config.keymaps")
 require("config.autocmds")
 
+--set up plugins
 local plugins = "plugins"
 
 local opts = {
