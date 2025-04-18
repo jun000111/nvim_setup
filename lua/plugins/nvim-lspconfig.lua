@@ -23,7 +23,7 @@ local config = function()
 				diagnostics = {
 					globals = { "vim" },
 				},
-        workspace = {
+workspace = {
   library = vim.api.nvim_get_runtime_file("", true),
   maxPreload = 1000,
   preloadFileSize = 100,
