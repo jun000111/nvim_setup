@@ -1,0 +1,19 @@
+[font.bold]
+family = "Roboto Mono Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "Roboto Mono Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "Roboto Mono Nerd Font"
+style = "Light Italic"
+
+[font.normal]
+family = "Roboto Mono Nerd Font"
+style = "Regular"
+
+[window]
+decorations = "none"
+opacity = 1

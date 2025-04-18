@@ -1,0 +1,22 @@
+window:
+  opacity: 1
+  decorations: none  
+
+font:
+  normal:
+    family: Roboto Nerd Font
+    style: Extra Light
+    
+  bold:
+    family: Roboto Nerd Font
+    style: Light
+
+  italic:
+    family: Roboto Nerd Font
+    style: Extra Light Italic
+
+  bold_italic:
+    family: Roboto Nerd Font
+    style: Light Italic
+
+
