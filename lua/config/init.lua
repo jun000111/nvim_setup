@@ -9,14 +9,8 @@ if not vim.loop.fs_stat(lazypath) then
 		lazypath,
 	})
 end
+
 vim.opt.rtp:prepend(lazypath)
-
-require("config.globals")
-require("config.options")
-require("config.keymaps")
-require("config.autocmds")
-
-local plugins = "plugins"
 
 local opts = {
 	defaults = {
@@ -42,5 +36,13 @@ local opts = {
 		notify = false,
 	},
 }
+
+require("config.globals")
+require("config.options")
+require("config.keymaps")
+require("config.autocmds")
+
+local plugins = require("config.plugin_loader")
+
 
 require("lazy").setup(plugins, opts)
