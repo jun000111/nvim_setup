@@ -13,7 +13,7 @@ opt.showtabline = 2
 opt.incsearch = true
 opt.ignorecase = true
 opt.smartcase = true
-opt.hlsearch = false
+opt.hlsearch = true
 
 -- Appearance
 opt.number = true

@@ -36,8 +36,12 @@ end
 --- @param command (string)
 --- @return string
 local get_cmd_string = function(command)
-	return [[<cmd>]] .. command .. [[<CR>]]
+  if type(command) == "function" then
+    return command
+  end
+  return "<cmd>" .. command .. "<CR>"
 end
+
 
 --- @param keymaps string
 --- @param command string
