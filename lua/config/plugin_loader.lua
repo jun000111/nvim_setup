@@ -1,6 +1,6 @@
 return {
 	require("plugins.comment"),
-	require("plugins.copilot"),
+	--require("plugins.copilot"),
 	require("plugins.gitsigns-nvim"),
 	require("plugins.indent-blankline"),
 	require("plugins.leap-nvim"),
@@ -9,7 +9,7 @@ return {
 	require("plugins.mason"),
 	require("plugins.mason-lspconfig"),
 	require("plugins.neorg"),
-	require("plugins.noice"),
+  require("plugins.noice"),
 	require("plugins.nvim-autopairs"),
 	require("plugins.nvim-cmp"),
 	require("plugins.nvim-dap"),
@@ -19,7 +19,6 @@ return {
 	require("plugins.nvim-treesitter"),
 	require("plugins.nvim-ts-autotag"),
 	require("plugins.nvim-web-devicons"),
-	require("plugins.rust-tools-nvim"),
 	require("plugins.tailwind-colorizer-cmp"),
 	require("plugins.telescope"),
 	require("plugins.theme"),
@@ -29,5 +28,6 @@ return {
 	require("plugins.vim-fugitive"),
 	require("plugins.vim-illuminate"),
 	require("plugins.whichkey"),
+  require('plugins.todo-comments-nvim')
 }
 

@@ -3,15 +3,25 @@ local diagnostic_signs = require("util.icons").diagnostic_signs
 local typescript_organise_imports = require("util.lsp").typescript_organise_imports
 
 local config = function()
-	require("neoconf").setup({})
 	local cmp_nvim_lsp = require("cmp_nvim_lsp")
 	local lspconfig = require("lspconfig")
 	local capabilities = cmp_nvim_lsp.default_capabilities()
 
-	for type, icon in pairs(diagnostic_signs) do
-		local hl = "DiagnosticSign" .. type
-		vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-	end
+  vim.diagnostic.config({
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = diagnostic_signs.Error,
+      [vim.diagnostic.severity.WARN] = diagnostic_signs.Warn,
+      [vim.diagnostic.severity.HINT] = diagnostic_signs.Hint,
+      [vim.diagnostic.severity.INFO] = diagnostic_signs.Info,
+    },
+  },
+  virtual_text = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+})
+
 
 	-- lua
 	lspconfig.lua_ls.setup({
